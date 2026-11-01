@@ -641,6 +641,208 @@
     .news-item .t{font-size:14.5px; line-height:1.6}
     .passage-item .t{font-size:14.5px}
   }
+
+  /* =====================================================================
+     UI v2 · 「备考笔记本」视觉层
+     - 英文内容统一用书籍衬线体，中文界面保持系统黑体：一眼分清「要读的英文」和「界面」
+     - 浅色模式加深强调色与次要文字，白字按钮、灰色说明都达到可读对比度
+     - 侧栏融入背景、当前页用白色标签；倒计时做成准考证存根
+     整段可整体删除回到旧版外观
+     ===================================================================== */
+  :root{
+    --serif:"Charter","Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,"Noto Serif","Times New Roman",serif;
+    --sans:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",system-ui,sans-serif;
+    --r-lg:16px; --r:12px; --r-sm:9px;
+    --ring:0 0 0 3px var(--accent-soft), 0 0 0 4px var(--accent);
+  }
+  html[data-mode="light"][data-palette="green"], :root:not([data-mode]){ --bg:#EEF0EB; --surface-2:#F7F8F5; --surface-3:#EEF0EB; --text:#262A25; --text-2:#4D544C; --muted:#6E766D; --line:#DDE1D9; --line-soft:#E9ECE6; --accent:#557060; --accent-2:#3F5849; --accent-soft:#E2EAE3; }
+  html[data-mode="light"][data-palette="blue"] { --bg:#ECEFF3; --text:#252B31; --text-2:#4B5560; --muted:#6B7783; --accent:#4F6D8C; --accent-2:#3B5672; --accent-soft:#E0E8F1; }
+  html[data-mode="light"][data-palette="brown"] { --bg:#F0ECE6; --text:#2F2821; --text-2:#5A4F44; --muted:#7A6E61; --accent:#86674A; --accent-2:#6B5139; --accent-soft:#EFE4D7; }
+  html[data-mode="light"][data-palette="lilac"] { --bg:#F0EDF2; --text:#2C2631; --text-2:#554D5C; --muted:#766E7E; --accent:#73618A; --accent-2:#5B4A70; --accent-soft:#EAE3EF; }
+  html[data-mode="light"][data-palette="gray"] { --bg:#EEEEEC; --text:#222221; --text-2:#4D4D4A; --muted:#6F6F6B; --accent:#4F4F4C; --accent-2:#333331; --accent-soft:#E2E2DF; }
+
+  body{font-family:var(--sans); font-size:15px; letter-spacing:.1px}
+  ::selection{background:var(--accent-soft); color:var(--text)}
+  button:focus-visible, a:focus-visible, summary:focus-visible, [tabindex]:focus-visible{outline:none; box-shadow:var(--ring)}
+  input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder{color:var(--muted); opacity:.75}
+
+  /* ---- 侧栏：与页面同底色，当前页是一张白色标签 ---- */
+  .sidebar{background:var(--bg); border-right:1px solid var(--line-soft); padding:26px 16px 18px}
+  .brand{padding:0 8px 24px}
+  .brand-mark{background:var(--text); color:var(--bg); border-radius:10px; font-family:var(--serif); font-size:13px; font-weight:700; letter-spacing:.6px}
+  .brand-name{font-size:15px; font-weight:600}
+  .brand-sub{font-family:var(--serif); font-style:italic; letter-spacing:.2px; font-size:12.5px}
+  .nav-label{letter-spacing:1px; font-size:11.5px; padding:0 10px 6px}
+  .nav button{padding:9px 11px; color:var(--text-2); border:1px solid transparent}
+  .nav button:hover{background:var(--surface-2)}
+  .nav button.active{background:var(--surface); color:var(--text); border-color:var(--line); box-shadow:0 1px 2px rgba(30,35,30,.05)}
+  .nav button.active::before{display:none}
+  .nav button.active svg{color:var(--accent)}
+  .side-foot{border-top:1px solid var(--line-soft)}
+  .pf-btn{background:var(--surface)}
+
+  /* ---- 倒计时：准考证存根 ---- */
+  .cd-mini{
+    position:relative; margin-top:12px; background:var(--surface); color:var(--text);
+    border:1px solid var(--line); border-radius:var(--r); padding:14px 16px 13px;
+    display:grid; grid-template-columns:auto 1fr; align-items:end; column-gap:10px;
+  }
+  .cd-mini::before, .cd-mini::after{
+    content:""; position:absolute; top:50%; width:12px; height:12px; margin-top:-6px; border-radius:50%;
+    background:var(--bg); border:1px solid var(--line);
+  }
+  .cd-mini::before{left:-7px; clip-path:inset(0 0 0 50%)}
+  .cd-mini::after{right:-7px; clip-path:inset(0 50% 0 0)}
+  .cd-mini b{font-family:var(--serif); font-size:38px; font-weight:600; line-height:.9; color:var(--accent-2); font-variant-numeric:lining-nums tabular-nums}
+  .cd-mini small{font-size:12px; color:var(--text-2); opacity:1; padding-bottom:3px; border-left:1px dashed var(--line); padding-left:10px; line-height:1.4}
+  .cd-mini:hover{border-color:var(--accent)}
+
+  /* ---- 顶栏：中文标题 + 英文模块名 ---- */
+  .main{padding:28px 40px 88px}
+  .content{max-width:940px}
+  .topbar{position:sticky; top:0; z-index:50; margin:-28px -40px 24px; padding:22px 40px 16px; background:var(--bg);
+    border-bottom:1px solid transparent; transition:border-color .2s}
+  .topbar.scrolled{border-bottom-color:var(--line)}
+  .pt-wrap{display:flex; flex-direction:column; min-width:0}
+  .page-title{font-size:24px; font-weight:600; letter-spacing:.5px; line-height:1.25}
+  .page-en{font-family:var(--serif); font-style:italic; font-size:15px; color:var(--muted); line-height:1.3; margin-top:2px}
+  .lv-badge{display:none}
+  .tr{background:var(--surface); border:1px solid var(--line); border-radius:var(--r-sm); padding:3px}
+  .tr button{border:none !important; background:none; border-radius:7px !important; padding:6px 18px; color:var(--text-2)}
+  .tr button.on{background:var(--text); color:var(--bg)}
+  #thBtn{border-radius:var(--r-sm)}
+
+  /* ---- 卡片、标题、按钮、标签 ---- */
+  .card{border-color:var(--line); box-shadow:none; padding:24px 28px}
+  .card h2{font-size:18px; margin-bottom:12px}
+  .card h2 .muted{font-size:13.5px}
+  .muted{color:var(--muted)}
+  .btn{border-radius:var(--r-sm); font-weight:500}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+  .btn.primary:hover{background:var(--accent-2); border-color:var(--accent-2)}
+  .btn.small{border-radius:8px}
+  .row .btn.small.primary{background:var(--text); border-color:var(--text); color:var(--bg)}
+  .tag{border-radius:6px; font-weight:500}
+  ul.list li{padding:14px 6px; border-bottom-color:var(--line-soft)}
+  .passage-item{transition:background .15s}
+  .passage-item:hover{background:var(--surface-2); color:inherit}
+  .passage-item:hover .t{color:var(--accent-2)}
+  input[type=text], input[type=email], select, textarea{border-radius:var(--r-sm)}
+
+  /* ---- 英文内容统一用衬线体 ---- */
+  .news-item .t, .passage-item .t, .art-text, .pr-read, .eg-en, .q-en, .dict-sent, #spInput,
+  .flashcard .word, .rel-chip .rc-w, #wordPop .wpw, .tr-p-en, .tr-input, .tr-g-en, #trMine, .tr-key i{font-family:var(--serif)}
+  .news-item .t{font-size:16.5px; line-height:1.5; letter-spacing:0; font-weight:500}
+  .passage-item .t{font-size:17px; letter-spacing:0; font-weight:500}
+  .tr-item .t{font-family:var(--sans); font-size:16px; font-weight:600}
+  .art-text, .pr-read{font-size:17px; line-height:1.85}
+  .eg-en{font-size:16px; line-height:1.7}
+
+  /* ---- 背单词：卡片像书页，数字用衬线 ---- */
+  .stats-row{gap:0; border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .stat{background:var(--surface) !important; border:none !important; border-radius:0 !important; border-left:1px solid var(--line-soft) !important}
+  .stat:first-child{border-left:none !important}
+  .stat b{font-family:var(--serif); font-size:28px; color:var(--text); font-variant-numeric:lining-nums tabular-nums}
+  .flashcard{background:var(--surface-2); border:1px solid var(--line)}
+  .flashcard .word{font-size:46px; font-weight:600; color:var(--text); letter-spacing:.2px}
+  .eg{background:var(--surface); border:1px solid var(--line-soft)}
+
+  /* ---- 登录页 ---- */
+  #loginGate .lg-card{border:1px solid var(--line)}
+  .lg-mark{background:var(--text) !important; color:var(--bg) !important; font-family:var(--serif)}
+
+  /* ---- 切换页面时内容轻轻出现（只回应点击；系统减少动态效果时关闭） ---- */
+  .content > section.tab-in{animation:tabIn .22s ease-out}
+  @keyframes tabIn{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion: reduce){ .content > section.tab-in{animation:none} * {scroll-behavior:auto !important} }
+
+  /* ---- 深色模式细节 ---- */
+  html[data-mode="dark"] .nav button.active{box-shadow:none}
+  html[data-mode="dark"] .flashcard{background:var(--surface-2)}
+  html[data-mode="dark"] .tr button.on, html[data-mode="dark"] .row .btn.small.primary{background:var(--accent); border-color:var(--accent); color:var(--bg)}
+  html[data-mode="dark"] .btn.primary{color:var(--bg)}
+  html[data-mode="dark"] .brand-mark, html[data-mode="dark"] .lg-mark{background:var(--accent) !important; color:var(--bg) !important}
+
+  /* =================== 翻译练习 =================== */
+  textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line); background:var(--surface); color:var(--text);
+    font-size:15px; line-height:1.7; outline:none; resize:vertical; transition:border-color .15s, box-shadow .15s;
+  }
+  textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft)}
+  .tr-lead{max-width:60ch; line-height:1.8}
+  .tr-list li.tr-item{display:flex; align-items:center; gap:18px; padding:14px 10px}
+  .tr-item-main{flex:1; min-width:0}
+  .tr-item-sub{color:var(--muted); font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:2px}
+  .tr-item-side{display:flex; align-items:center; gap:10px; flex:0 0 auto; font-size:12.5px; white-space:nowrap}
+  .tr-done{color:var(--accent-2); font-weight:500}
+  .tr-draft{color:var(--warm)}
+  .tr-gloss{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:28px}
+  .tr-g{display:flex; justify-content:space-between; gap:14px; padding:9px 2px; border-bottom:1px solid var(--line-soft); font-size:14px}
+  .tr-g-zh{color:var(--text); flex:0 0 auto}
+  .tr-g-en{color:var(--text-2); text-align:right; font-size:15px}
+
+  .tr-task-head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:16px}
+  .tr-task-meta{display:flex; align-items:center; gap:8px; flex-wrap:wrap; flex:1}
+  .tr-timer{display:flex; align-items:center; gap:10px}
+  #trClock{font-family:var(--serif); font-size:22px; font-variant-numeric:tabular-nums lining-nums; color:var(--text); min-width:62px; text-align:right}
+  .tr-timer.over #trClock{color:var(--danger)}
+  .card h2.tr-title{font-size:22px; margin-bottom:12px}
+  .tr-zh{
+    font-size:17px; line-height:2.05; color:var(--text); background:var(--surface-2);
+    border:1px solid var(--line-soft); border-radius:var(--r); padding:18px 22px; margin-bottom:12px; letter-spacing:.3px;
+  }
+  .tr-hint{margin-bottom:14px}
+  .tr-hint .row{gap:6px}
+  .tr-key{display:inline-flex; align-items:baseline; gap:6px; padding:4px 10px; border-radius:7px; font-size:13px;
+    background:var(--surface-3); color:var(--text-2); border:1px solid var(--line-soft)}
+  .tr-key i{font-style:normal; font-size:14px; color:var(--muted)}
+  .tr-key.hit{background:var(--accent-soft); color:var(--accent-2); border-color:transparent}
+  .tr-key.hit i{color:var(--accent-2)}
+  .tr-key.miss{background:transparent; border-style:dashed; border-color:var(--line)}
+  label.lbl{display:block; margin-bottom:6px}
+  .tr-input{font-size:17px; line-height:1.8; min-height:220px}
+  .tr-actions{margin-top:12px}
+
+  .tr-result, #trView{scroll-margin-top:96px}
+  .tr-cover{display:flex; gap:22px; align-items:flex-start; padding-bottom:16px; border-bottom:1px solid var(--line-soft)}
+  .tr-cover-num{flex:0 0 auto; font-family:var(--serif); line-height:1; color:var(--text)}
+  .tr-cover-num b{font-size:52px; font-weight:600; color:var(--accent-2)}
+  .tr-cover-num span{font-size:22px; color:var(--muted); margin-left:4px}
+  .tr-cover-body{flex:1; min-width:0}
+  .tr-cover-body .lbl{margin-bottom:8px}
+  .tr-keys{display:flex; flex-wrap:wrap; gap:6px}
+  .tr-note{margin:10px 0 18px; font-size:12.5px}
+  .tr-mine{background:var(--surface-2); border-radius:var(--r); padding:14px 18px; margin-bottom:18px}
+  .tr-mine .lbl{margin-bottom:4px}
+  #trMine{white-space:pre-wrap; font-size:16px; line-height:1.8}
+  .tr-pairs{list-style:none; counter-reset:trp; margin:0; padding:0}
+  .tr-pairs li{counter-increment:trp; display:grid; grid-template-columns:28px 1fr; column-gap:8px; padding:12px 0; border-bottom:1px solid var(--line-soft)}
+  .tr-pairs li::before{content:counter(trp); grid-row:span 2; font-family:var(--serif); color:var(--muted); font-size:15px; line-height:1.6}
+  .tr-p-zh{color:var(--text-2); font-size:14px; line-height:1.8}
+  .tr-p-en{font-size:16.5px; line-height:1.75; color:var(--text); margin-top:2px}
+  .tr-p-en .eg-spk{vertical-align:2px}
+  .tr-tip{margin-top:16px; font-size:14px; line-height:1.85; color:var(--text-2); border-left:3px solid var(--accent); padding:2px 0 2px 14px}
+  .tr-tip b{display:block; color:var(--text); margin-bottom:2px}
+
+  @media (max-width: 900px){
+    .main{padding:0 14px 64px}
+    .topbar{margin:0 -14px 14px; padding:12px 14px 10px}
+    .page-title{font-size:19px}
+    .page-en{font-size:13px}
+    .card{padding:18px 16px}
+    .flashcard .word{font-size:36px}
+    .stat b{font-size:22px}
+    .sidebar{background:var(--bg)}
+    .tr-list li.tr-item{flex-direction:column; align-items:stretch; gap:6px}
+    .tr-item-side{flex-wrap:wrap}
+    .tr-gloss{grid-template-columns:1fr}
+    .tr-zh{padding:14px 15px; font-size:16px}
+    .tr-cover{gap:14px}
+    .tr-cover-num b{font-size:40px}
+    .tr-timer{margin-left:auto}
+    .tr-task-meta{order:3; flex-basis:100%}
+    .art-text, .pr-read{font-size:16.5px}
+  }
 </style>
 </head>
 <body>
@@ -650,7 +852,7 @@
       <div class="brand-mark">CET</div>
       <div>
         <div class="brand-name">四六级备考工作台</div>
-        <div class="brand-sub">READ · LISTEN · RECITE</div>
+        <div class="brand-sub">CET-4/6 study desk</div>
       </div>
     </div>
     <nav class="nav">
@@ -668,6 +870,7 @@
       </div>
       <div class="nav-group">
         <div class="nav-label">输出</div>
+        <button data-tab="translate"><svg viewBox="0 0 24 24"><path d="M3.5 5.5h8M7.5 4v1.5M5 5.5c.6 3 2.6 5.3 5.5 6.5M10 5.5c-.7 3.2-2.8 5.6-6 7"/><path d="M12.5 20l4-9.5 4 9.5M14 17h5"/></svg><span>翻译练习</span></button>
         <button data-tab="essay"><svg viewBox="0 0 24 24"><path d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17z"/><path d="M14.5 5.5l4 4"/></svg><span>作文素材</span></button>
         <button data-tab="fav"><svg viewBox="0 0 24 24"><path d="M12 3.6l2.7 5.4 6 .9-4.35 4.2 1.03 6-5.38-2.83L6.62 20.1l1.03-6L3.3 9.9l6-.9z"/><path d="M8.6 18.5l-1.2 2.1"/></svg><span>我的收藏</span></button>
       </div>
@@ -688,7 +891,7 @@
   <main class="main">
     <header class="topbar">
       <button class="hamburger" id="menuBtn" aria-label="菜单">☰</button>
-      <div class="page-title" id="pageTitle">英语时事</div>
+      <div class="pt-wrap"><div class="page-title" id="pageTitle">英语时事</div><div class="page-en" id="pageEn">News in English</div></div>
       <span class="lv-badge" id="lvBadge">四级</span>
       <div class="tr">
         <button id="lv4">四级</button>
@@ -912,6 +1115,69 @@
   </section>
 
   <!-- 作文素材（内置素材大全） -->
+  <section id="tab-translate" style="display:none;">
+    <div id="trPicker">
+      <div class="card">
+        <h2>汉译英练习</h2>
+        <p class="muted tr-lead">按四六级翻译题的题材编写的原创段落。先自己译完，再逐句对照参考译文，检查关键表达有没有用上。</p>
+        <div class="row" style="margin:14px 0 6px;"><span class="lbl">题材</span><div class="row" id="trThemeChips"></div></div>
+        <ul class="list tr-list" id="trList"></ul>
+        <div class="empty" id="trEmpty" style="display:none;">这个题材下暂时没有段落，换一个题材看看</div>
+      </div>
+      <div class="card">
+        <h2>高频表达</h2>
+        <div class="row" style="margin-bottom:10px;">
+          <input type="text" id="trGlossSearch" placeholder="搜中文或英文，如 遗产 / heritage" style="flex:1; min-width:180px;">
+          <span class="muted" id="trGlossCount"></span>
+        </div>
+        <div class="tr-gloss" id="trGloss"></div>
+      </div>
+    </div>
+
+    <div id="trView" style="display:none;">
+      <div class="card tr-task">
+        <div class="tr-task-head">
+          <button class="btn small" id="trBack">← 返回列表</button>
+          <div class="tr-task-meta" id="trMeta"></div>
+          <div class="tr-timer" id="trTimer" title="四六级翻译建议用时 30 分钟">
+            <span id="trClock">30:00</span>
+            <button class="btn small" id="trClockBtn">开始计时</button>
+          </div>
+        </div>
+        <h2 class="tr-title" id="trTitle"></h2>
+        <div class="tr-zh" id="trZh"></div>
+        <details class="adv tr-hint">
+          <summary>提示：这篇要用到的关键表达（只显示中文）</summary>
+          <div class="row" id="trHintKeys"></div>
+        </details>
+        <label class="lbl" for="trInput">你的译文</label>
+        <textarea id="trInput" class="tr-input" rows="9" spellcheck="false" placeholder="在这里写英文译文。内容会自动保存在本机，换页面回来还在。"></textarea>
+        <div class="row tr-actions">
+          <span class="muted" id="trWords">0 词</span>
+          <span style="flex:1"></span>
+          <button class="btn small" id="trClear">清空</button>
+          <button class="btn primary" id="trSubmit">提交并对照参考译文</button>
+        </div>
+      </div>
+
+      <div class="card tr-result" id="trResult" style="display:none;">
+        <h2>对照与检查</h2>
+        <div class="tr-cover" id="trCover"></div>
+        <p class="muted tr-note">关键表达覆盖只检查词语有没有用上，不等于译文得分；句子结构和语法请对照下面的参考译文自己判断。</p>
+        <div class="tr-mine">
+          <div class="lbl">你的译文</div>
+          <div id="trMine"></div>
+        </div>
+        <ol class="tr-pairs" id="trPairs"></ol>
+        <div class="tr-tip" id="trTip"></div>
+        <div class="row" style="margin-top:14px;">
+          <button class="btn small" id="trRetry">重新翻译这一篇</button>
+          <button class="btn small" id="trNext">下一篇 →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="tab-essay" style="display:none;">
     <div class="card">
       <h2>作文素材大全 <span class="muted" style="font-weight:400;">· 名著金句 / 高分句型，点 ☆ 收进「我的收藏」</span></h2>
@@ -1012,7 +1278,7 @@
   <div class="lg-card">
     <div class="lg-mark">CET</div>
     <div class="lg-title">四六级备考工作台</div>
-    <p class="lg-sub">输入邮箱就能进。学习记录（生词本、背单词进度、做题得分）会<b>按邮箱分开保存</b>，同一个人换设备登录同一个邮箱即可继续。</p>
+    <p class="lg-sub">输入邮箱就能进。学习记录（生词本、背单词进度、做题得分）会<b>按邮箱分开保存</b>，保存在这台设备的浏览器里；换设备请用「账号与数据」导出再导入。</p>
     <p class="lg-date" id="lgDate"></p>
     <label class="lg-label" for="lgEmail">邮箱</label>
     <input type="email" id="lgEmail" placeholder="例如 name@example.com" autocomplete="email" spellcheck="false">
@@ -1066,6 +1332,7 @@
 <script src="words.js"></script>
 <script src="examples.js"></script>
 <script src="grammar.js"></script>
+<script src="translate.js"></script>
 <script src="essay.js"></script>
 <script src="quotes.js"></script>
 <script src="real.js"></script>
@@ -1436,10 +1703,15 @@
   /* ===== 标签页（左栏导航） ===== */
   var TAB_TITLE = {
     news: "英语时事", read: "阅读理解", listen: "听力听写",
-    vocab: "背单词", wordbook: "生词本", grammar: "语法语态", essay: "作文素材", fav: "我的收藏",
+    vocab: "背单词", wordbook: "生词本", grammar: "语法语态", translate: "翻译练习", essay: "作文素材", fav: "我的收藏",
     real: "历年真题"
   };
-  var TABS = ["news", "read", "listen", "real", "vocab", "grammar", "essay", "wordbook", "fav"];
+  var TAB_EN = {
+    news: "News in English", read: "Reading", listen: "Listening", real: "Past Papers",
+    vocab: "Vocabulary", wordbook: "My Word List", grammar: "Grammar", translate: "Translation",
+    essay: "Writing Bank", fav: "Saved"
+  };
+  var TABS = ["news", "read", "listen", "real", "vocab", "grammar", "translate", "essay", "wordbook", "fav"];
   var tabs = document.querySelectorAll(".nav button");
   function closeMenu() {
     var sb = document.getElementById("sidebar"), sc = document.getElementById("scrim");
@@ -1454,6 +1726,10 @@
     });
     var pt = document.getElementById("pageTitle");
     if (pt && TAB_TITLE[name]) pt.textContent = TAB_TITLE[name];
+    var pe = document.getElementById("pageEn");
+    if (pe) pe.textContent = TAB_EN[name] || "";
+    var sec = document.getElementById("tab-" + name);
+    if (sec) { sec.classList.remove("tab-in"); void sec.offsetWidth; sec.classList.add("tab-in"); }
     document.title = (TAB_TITLE[name] || "四六级备考") + " · 四六级备考工作台";
     if (window.scrollTo) window.scrollTo({ top: 0, behavior: "smooth" });
     try { if (history.replaceState) history.replaceState(null, "", "#" + name); } catch (e) {}
@@ -1463,6 +1739,13 @@
   tabs.forEach(function (b) {
     b.addEventListener("click", function () { goTab(b.dataset.tab); });
   });
+  /* 顶栏吸顶后显示一条分隔线 */
+  (function () {
+    var tb = document.querySelector(".topbar");
+    if (!tb) return;
+    var on = function () { tb.classList.toggle("scrolled", (window.scrollY || 0) > 8); };
+    window.addEventListener("scroll", on, { passive: true }); on();
+  })();
   /* 抽屉菜单（手机端） */
   (function () {
     var mb = document.getElementById("menuBtn"), sb = document.getElementById("sidebar"), sc = document.getElementById("scrim");
@@ -1492,6 +1775,7 @@
     nextCard(); renderStats();
     if (db.vmode === "spell") { spPhase = "setup"; spShow(); }
     renderGrammar();                       /* 语法要跟着级别切换（此前漏了，这是 bug） */
+    trTheme = "全部"; trCloseView(); renderTrans();
     var _b = document.getElementById("lvBadge");
     if (_b) _b.textContent = lv;
     syncCustomSelects();
@@ -4249,6 +4533,208 @@
     renderThemeGrid();
   })();
 
+  /* ===== 翻译练习（汉译英） ===== */
+  var TR = window.CET_TRANSLATE || { items: [], glossary: [] };
+  db.trans = db.trans || {};                 /* { 篇目id: { draft, last: {text, at, hit, total} } } */
+  var trTheme = "全部", trCur = null, trTimerId = null, trLeft = 30 * 60, trDraftTimer = null;
+
+  function trLevelItems() { return TR.items.filter(function (x) { return x.lv === db.level; }); }
+  function trFiltered() {
+    return trLevelItems().filter(function (x) { return trTheme === "全部" || x.theme === trTheme; });
+  }
+  function trChars(it) { return it.zh.join("").replace(/\s/g, "").length; }
+  function trNorm(t) {
+    return " " + String(t || "").toLowerCase()
+      .replace(/[‘’]/g, "'").replace(/[“”]/g, "\"")
+      .replace(/[‐-―]/g, "-").replace(/\s+/g, " ") + " ";
+  }
+  function trCheck(it, text) {
+    var n = trNorm(text);
+    return it.keys.map(function (k) {
+      var alts = k[1].split("|");
+      var hit = alts.some(function (a) { return n.indexOf(a.toLowerCase()) >= 0; });
+      var ref = trNorm(it.en.join(" "));
+      var shown = alts.filter(function (a) { return ref.indexOf(a.toLowerCase()) >= 0; })[0] || alts[0];
+      return { zh: k[0], en: shown, hit: hit };
+    });
+  }
+  function trDate(ts) { var d = new Date(ts); return (d.getMonth() + 1) + "月" + d.getDate() + "日"; }
+  function trWords(t) { var m = String(t || "").match(/[A-Za-z0-9][A-Za-z0-9'\-]*/g); return m ? m.length : 0; }
+
+  function renderTrans() {
+    var lvItems = trLevelItems();
+    var themes = ["全部"];
+    lvItems.forEach(function (x) { if (themes.indexOf(x.theme) < 0) themes.push(x.theme); });
+    if (themes.indexOf(trTheme) < 0) trTheme = "全部";
+    chipRow("trThemeChips", themes, trTheme, function (v) { trTheme = v; renderTrans(); });
+    var list = trFiltered();
+    var ul = document.getElementById("trList");
+    ul.innerHTML = "";
+    document.getElementById("trEmpty").style.display = list.length ? "none" : "";
+    list.forEach(function (it) {
+      var rec = db.trans[it.id] || {};
+      var li = document.createElement("li");
+      li.className = "passage-item tr-item";
+      var status = rec.last
+        ? "<span class='tr-done'>已练 · 关键表达 " + rec.last.hit + "/" + rec.last.total + " · " + trDate(rec.last.at) + "</span>"
+        : (rec.draft ? "<span class='tr-draft'>有草稿</span>" : "<span class='muted'>未练习</span>");
+      li.innerHTML =
+        "<div class='tr-item-main'><div class='t'>" + esc(it.title) + "</div>" +
+        "<div class='tr-item-sub'>" + esc(it.zh[0]) + "</div></div>" +
+        "<div class='tr-item-side'><span class='tag'>" + esc(it.theme) + "</span>" +
+        "<span class='muted'>" + trChars(it) + " 字</span>" + status + "</div>";
+      li.addEventListener("click", function () { openTrans(it.id); });
+      ul.appendChild(li);
+    });
+    renderGloss();
+  }
+
+  function renderGloss() {
+    var box = document.getElementById("trGloss");
+    if (!box) return;
+    var q = (document.getElementById("trGlossSearch").value || "").trim().toLowerCase();
+    var rows = (TR.glossary || []).filter(function (g) {
+      return !q || (g[0] + " " + g[1]).toLowerCase().indexOf(q) >= 0;
+    });
+    document.getElementById("trGlossCount").textContent = rows.length + " 条";
+    box.innerHTML = rows.length ? rows.map(function (g) {
+      return "<div class='tr-g'><span class='tr-g-zh'>" + esc(g[0]) + "</span><span class='tr-g-en'>" + esc(g[1]) + "</span></div>";
+    }).join("") : "<div class='empty'>没有找到，换个说法试试</div>";
+  }
+  document.getElementById("trGlossSearch").addEventListener("input", renderGloss);
+
+  function trClockPaint() {
+    var m = Math.floor(Math.max(trLeft, 0) / 60), s = Math.max(trLeft, 0) % 60;
+    var el = document.getElementById("trClock");
+    el.textContent = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+    document.getElementById("trTimer").classList.toggle("over", trLeft <= 0);
+  }
+  function trClockStop() {
+    if (trTimerId) { clearInterval(trTimerId); trTimerId = null; }
+    document.getElementById("trClockBtn").textContent = trLeft < 30 * 60 && trLeft > 0 ? "继续计时" : "开始计时";
+  }
+  function trClockReset() { trClockStop(); trLeft = 30 * 60; trClockPaint(); document.getElementById("trClockBtn").textContent = "开始计时"; }
+  document.getElementById("trClockBtn").addEventListener("click", function () {
+    if (trTimerId) { trClockStop(); return; }
+    if (trLeft <= 0) trLeft = 30 * 60;
+    this.textContent = "暂停";
+    trTimerId = setInterval(function () {
+      trLeft -= 1; trClockPaint();
+      if (trLeft <= 0) { trClockStop(); document.getElementById("trClockBtn").textContent = "重新计时"; }
+    }, 1000);
+  });
+
+  function trCloseView() {
+    trClockStop();
+    trCur = null;
+    var v = document.getElementById("trView"), p = document.getElementById("trPicker");
+    if (v) v.style.display = "none";
+    if (p) p.style.display = "";
+  }
+  function trItem(id) { var r = null; TR.items.forEach(function (x) { if (x.id === id) r = x; }); return r; }
+
+  function openTrans(id) {
+    var it = trItem(id);
+    if (!it) return;
+    trCur = it;
+    var rec = db.trans[id] || {};
+    document.getElementById("trPicker").style.display = "none";
+    document.getElementById("trView").style.display = "";
+    document.getElementById("trTitle").textContent = it.title;
+    document.getElementById("trMeta").innerHTML =
+      "<span class='tag'>" + esc(it.lv) + "</span><span class='tag'>" + esc(it.theme) + "</span>" +
+      "<span class='muted'>" + trChars(it) + " 字 · 建议 30 分钟</span>" +
+      (rec.last ? "<span class='muted'>上次关键表达 " + rec.last.hit + "/" + rec.last.total + "</span>" : "");
+    document.getElementById("trZh").textContent = it.zh.join("");
+    document.getElementById("trHintKeys").innerHTML = it.keys.map(function (k) {
+      return "<span class='tr-key'>" + esc(k[0]) + "</span>";
+    }).join("");
+    var inp = document.getElementById("trInput");
+    inp.value = rec.draft || "";
+    document.getElementById("trWords").textContent = trWords(inp.value) + " 词";
+    document.getElementById("trResult").style.display = "none";
+    trClockReset();
+    if (window.scrollTo) window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  document.getElementById("trInput").addEventListener("input", function () {
+    var v = this.value;
+    document.getElementById("trWords").textContent = trWords(v) + " 词";
+    if (!trCur) return;
+    var id = trCur.id;
+    clearTimeout(trDraftTimer);
+    trDraftTimer = setTimeout(function () {
+      db.trans[id] = db.trans[id] || {};
+      db.trans[id].draft = v;
+      save();
+    }, 400);
+  });
+
+  function trSubmit() {
+    if (!trCur) return;
+    var it = trCur, text = document.getElementById("trInput").value.trim();
+    if (trWords(text) < 5) {
+      document.getElementById("trWords").innerHTML = "<b style='color:var(--danger)'>先写完译文再提交（至少几句英文）</b>";
+      document.getElementById("trInput").focus();
+      return;
+    }
+    trClockStop();
+    var res = trCheck(it, text);
+    var hit = res.filter(function (r) { return r.hit; }).length;
+    db.trans[it.id] = db.trans[it.id] || {};
+    db.trans[it.id].draft = text;
+    db.trans[it.id].last = { text: text, at: Date.now(), hit: hit, total: res.length };
+    save();
+
+    document.getElementById("trCover").innerHTML =
+      "<div class='tr-cover-num'><b>" + hit + "</b><span>/ " + res.length + "</span></div>" +
+      "<div class='tr-cover-body'><div class='lbl'>关键表达用上了 " + hit + " 个</div><div class='tr-keys'>" +
+      res.map(function (r) {
+        return "<span class='tr-key " + (r.hit ? "hit" : "miss") + "'>" + (r.hit ? "✓ " : "") + esc(r.zh) +
+          " <i>" + esc(r.en) + "</i></span>";
+      }).join("") + "</div></div>";
+    document.getElementById("trMine").textContent = text;
+    var ol = document.getElementById("trPairs");
+    ol.innerHTML = "";
+    it.zh.forEach(function (z, i) {
+      var li = document.createElement("li");
+      li.innerHTML = "<div class='tr-p-zh'>" + esc(z) + "</div>" +
+        "<div class='tr-p-en'>" + esc(it.en[i] || "") +
+        " <button class='eg-spk' title='朗读这句参考译文'>🔊</button></div>";
+      li.querySelector("button").addEventListener("click", function () { speak(it.en[i]); });
+      ol.appendChild(li);
+    });
+    document.getElementById("trTip").innerHTML = it.tip ? "<b>译法提示</b>" + esc(it.tip) : "";
+    var r = document.getElementById("trResult");
+    r.style.display = "";
+    r.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  document.getElementById("trSubmit").addEventListener("click", trSubmit);
+  document.getElementById("trClear").addEventListener("click", function () {
+    if (!trCur) return;
+    var inp = document.getElementById("trInput");
+    if (inp.value.trim() && !confirm("清空这篇的译文草稿？")) return;
+    inp.value = "";
+    inp.dispatchEvent(new Event("input"));
+  });
+  document.getElementById("trRetry").addEventListener("click", function () {
+    if (!trCur) return;
+    var inp = document.getElementById("trInput");
+    inp.value = ""; inp.dispatchEvent(new Event("input"));
+    document.getElementById("trResult").style.display = "none";
+    trClockReset();
+    inp.focus();
+    if (window.scrollTo) window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  document.getElementById("trNext").addEventListener("click", function () {
+    if (!trCur) return;
+    var list = trFiltered(), i = -1;
+    list.forEach(function (x, k) { if (x.id === trCur.id) i = k; });
+    var nx = list[(i + 1) % list.length];
+    if (nx) openTrans(nx.id);
+  });
+  document.getElementById("trBack").addEventListener("click", function () { trCloseView(); renderTrans(); });
+
   /* 启动 */
   document.getElementById("bankSel").value = db.level === "四级" ? "cet4" : "cet6";
   document.getElementById("dailyQuota").value = db.quota;
@@ -4256,7 +4742,7 @@
   renderThemeChips(); renderReadings(); renderReadSrcChips(); applyReadSrc();
   renderDictPicker(); renderNews(); renderNewsAudio(); renderLsList();
   newsApplyCache(); autoNews(false);
-  renderGrammar(); renderEssay(); renderQuotes(); renderReal();
+  renderGrammar(); renderEssay(); renderQuotes(); renderReal(); renderTrans();
   migrateLook();
   applyLook();
   syncCustomSelects();
