@@ -5,31 +5,31 @@ window.CET_CONTENT = {
 "news": [
     {
       "id": "n01",
-      "date": "2026-10-31",
-      "src": "CGTN·China",
-      "title": "Gang Aoping: HKSAR govt. responded to Tai Po fire with accountability",
-      "link": "https://news.cgtn.com/news/2026-10-31/Gang-Aoping-HKSAR-govt-responded-to-Tai-Po-fire-with-accountability-1RGwhgNB7A4/p.html"
+      "date": "2026-11-01",
+      "src": "CGTN·Business",
+      "title": "US tech stocks hit by earnings shock: Alphabet slides 13%",
+      "link": "https://news.cgtn.com/news/2026-11-01/US-tech-stocks-hit-by-earnings-shock-Alphabet-slides-13--1RIlYIXpPyg/p.html"
     },
     {
       "id": "n02",
-      "date": "2026-10-29",
-      "src": "CGTN·Business",
-      "title": "El Nino returns: How will it disrupt global coal supplies?",
-      "link": "https://news.cgtn.com/news/2026-10-29/El-Nino-returns-How-will-it-disrupt-global-coal-supplies--1RDCWl5K09i/p.html"
+      "date": "2026-11-01",
+      "src": "CGTN·China",
+      "title": "CMSA: Lunar-landing phase of exploration program advancing steadily",
+      "link": "https://news.cgtn.com/news/2026-11-01/CMSA-Lunar-landing-phase-of-exploration-program-advancing-steadily-1RHhZPPs4iA/p.html"
     },
     {
       "id": "n03",
-      "date": "2026-10-29",
+      "date": "2026-11-01",
       "src": "CGTN·China",
-      "title": "Austrian buyer says Canton Fair is all about reliability and trust",
-      "link": "https://news.cgtn.com/news/2026-10-29/Austrian-buyer-says-Canton-Fair-is-all-about-reliability-and-trust-1RDCcKb9BVS/p.html"
+      "title": "China drafts stricter rules for Antarctic activities",
+      "link": "https://news.cgtn.com/news/2026-11-01/China-drafts-stricter-rules-for-Antarctic-activities-1RICy9p21gY/p.html"
     },
     {
       "id": "n04",
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "src": "CGTN·China",
-      "title": "The new global pact to save the ocean",
-      "link": "https://news.cgtn.com/news/2026-10-29/The-new-global-pact-to-save-the-ocean-1RDBnji1ZGE/p.html"
+      "title": "Xi meets Swiss president, calls for closer China-Europe economic ties",
+      "link": "https://news.cgtn.com/news/2026-10-30/Chinese-President-Xi-Jinping-meets-president-of-Swiss-Confederation-1RFaOeSkdTW/p.html"
     },
     {
       "id": "n05",
@@ -40,38 +40,38 @@ window.CET_CONTENT = {
     },
     {
       "id": "n06",
+      "date": "2026-10-26",
+      "src": "CGTN·Business",
+      "title": "Improving China's business environment to revitalize growth",
+      "link": "https://news.cgtn.com/news/2026-10-26/Improving-China-s-business-environment-to-revitalize-growth-1RyIGRzKN2w/p.html"
+    },
+    {
+      "id": "n07",
       "date": "2026-10-25",
       "src": "CGTN·Sports",
       "title": "2026 Baoji Marathon kicks off, drawing runners from all walks of life",
       "link": "https://news.cgtn.com/news/2026-10-25/2026-Baoji-Marathon-kicks-off-drawing-runners-from-all-walks-of-life-1Rxee9hoZ6E/p.html"
     },
     {
-      "id": "n07",
+      "id": "n08",
       "date": "2026-10-25",
       "src": "CGTN·Travel",
       "title": "Tracing the Vision: The Ecology of Prosperity",
       "link": "https://news.cgtn.com/news/2026-10-25/Tracing-the-Vision-The-Ecology-of-Prosperity-1RtTikfpx3q/p.html"
     },
     {
-      "id": "n08",
+      "id": "n09",
       "date": "2026-10-24",
       "src": "CGTN·Culture",
       "title": "Avoiding suspicion: An ancient lesson for modern governance",
       "link": "https://news.cgtn.com/news/2026-10-24/Avoiding-suspicion-An-ancient-lesson-for-modern-governance-1RuUb8LWzYc/p.html"
     },
     {
-      "id": "n09",
-      "date": "2026-10-23",
-      "src": "CGTN·Business",
-      "title": "Eurasia Group economist: China's new growth drivers taking shape",
-      "link": "https://news.cgtn.com/news/2026-10-23/Eurasia-Group-economist-China-s-new-growth-drivers-taking-shape-1RtlRm0mi6Q/p.html"
-    },
-    {
       "id": "n10",
       "date": "2026-10-20",
       "src": "CGTN·Business",
-      "title": "China's economic transformation gains momentum",
-      "link": "https://news.cgtn.com/news/2026-10-20/China-s-economic-transformation-gains-momentum-1RowU8b9Q7m/p.html"
+      "title": "Chinese central bank to employ 3-part AI strategy, says governor",
+      "link": "https://news.cgtn.com/news/2026-10-20/Chinese-central-bank-to-employ-3-part-AI-strategy-says-governor-1Rp01zM009O/p.html"
     },
     {
       "id": "n11",
