@@ -34,79 +34,79 @@ window.CET_CONTENT = {
     {
       "id": "n05",
       "date": "2026-10-28",
-      "src": "CGTN·Culture",
-      "title": "Australia returns two cultural relics to China",
-      "link": "https://news.cgtn.com/news/2026-10-28/Australia-returns-two-cultural-relics-to-China-1RBBuEhs9Vu/p.html"
+      "src": "CGTN·Travel",
+      "title": "\"The future is here!\" US student explores Shenzhen before APEC 2026",
+      "link": "https://news.cgtn.com/news/2026-10-28/-The-future-is-here-US-student-explores-Shenzhen-before-APEC-2026-1RBONzxowiQ/p.html"
     },
     {
       "id": "n06",
+      "date": "2026-10-27",
+      "src": "CGTN·Culture",
+      "title": "Art Up Close | Ancient walls, new sounds",
+      "link": "https://news.cgtn.com/news/2026-10-27/Art-Up-Close-Ancient-walls-new-sounds-1RzWrik2tBC/p.html"
+    },
+    {
+      "id": "n07",
+      "date": "2026-10-26",
+      "src": "CGTN·Travel",
+      "title": "Blink and You'll Miss It: Yangtze Finless Porpoises",
+      "link": "https://news.cgtn.com/news/2026-10-26/Blink-and-You-ll-Miss-It-Yangtze-Finless-Porpoises-1RmVlGffDnq/p.html"
+    },
+    {
+      "id": "n08",
       "date": "2026-10-26",
       "src": "CGTN·Business",
       "title": "Improving China's business environment to revitalize growth",
       "link": "https://news.cgtn.com/news/2026-10-26/Improving-China-s-business-environment-to-revitalize-growth-1RyIGRzKN2w/p.html"
     },
     {
-      "id": "n07",
-      "date": "2026-10-25",
-      "src": "CGTN·Sports",
-      "title": "2026 Baoji Marathon kicks off, drawing runners from all walks of life",
-      "link": "https://news.cgtn.com/news/2026-10-25/2026-Baoji-Marathon-kicks-off-drawing-runners-from-all-walks-of-life-1Rxee9hoZ6E/p.html"
-    },
-    {
-      "id": "n08",
-      "date": "2026-10-25",
-      "src": "CGTN·Travel",
-      "title": "Tracing the Vision: The Ecology of Prosperity",
-      "link": "https://news.cgtn.com/news/2026-10-25/Tracing-the-Vision-The-Ecology-of-Prosperity-1RtTikfpx3q/p.html"
-    },
-    {
       "id": "n09",
       "date": "2026-10-24",
-      "src": "CGTN·Culture",
-      "title": "Avoiding suspicion: An ancient lesson for modern governance",
-      "link": "https://news.cgtn.com/news/2026-10-24/Avoiding-suspicion-An-ancient-lesson-for-modern-governance-1RuUb8LWzYc/p.html"
+      "src": "CGTN·Sports",
+      "title": "Baoji Marathon draws 31,000 runners, highlights ancient culture",
+      "link": "https://news.cgtn.com/news/2026-10-24/Baoji-Marathon-draws-31-000-runners-highlights-ancient-culture-1RvD06t6jHG/p.html"
     },
     {
       "id": "n10",
+      "date": "2026-10-24",
+      "src": "CGTN·Culture",
+      "title": "AI recreates Long March history in anniversary TV gala",
+      "link": "https://news.cgtn.com/news/2026-10-24/AI-recreates-Long-March-history-in-anniversary-TV-gala-1RvjqCDah1u/p.html"
+    },
+    {
+      "id": "n11",
       "date": "2026-10-20",
       "src": "CGTN·Business",
       "title": "Chinese central bank to employ 3-part AI strategy, says governor",
       "link": "https://news.cgtn.com/news/2026-10-20/Chinese-central-bank-to-employ-3-part-AI-strategy-says-governor-1Rp01zM009O/p.html"
     },
     {
-      "id": "n11",
-      "date": "2026-10-19",
-      "src": "CGTN·Travel",
-      "title": "Golden autumn transforms desert poplar forests in Inner Mongolia",
-      "link": "https://news.cgtn.com/news/2026-10-19/Golden-autumn-transforms-desert-poplar-forests-in-Inner-Mongolia-1RmPqNqSUHC/p.html"
-    },
-    {
       "id": "n12",
-      "date": "2026-10-18",
-      "src": "CGTN·Culture",
-      "title": "2026 Yangtze River Delta International Youth Film Festival opens",
-      "link": "https://news.cgtn.com/news/2026-10-18/2026-Yangtze-River-Delta-International-Youth-Film-Festival-opens-1Rld9kPWbOo/p.html"
+      "date": "2026-10-17",
+      "src": "CGTN·Sports",
+      "title": "China's outdoor sports industry reaches 3.17 trillion yuan",
+      "link": "https://news.cgtn.com/news/2026-10-17/China-s-outdoor-sports-industry-reaches-3-17-trillion-yuan-1RjebFQrlHW/p.html"
     },
     {
       "id": "n13",
-      "date": "2026-10-17",
-      "src": "CGTN·Sports",
-      "title": "How Zheng Qinwen transformed her game and mindset in two months",
-      "link": "https://news.cgtn.com/news/2026-10-17/How-Zheng-Qinwen-transformed-her-game-and-mindset-in-two-months-1RjbdSFXKwg/p.html"
+      "date": "2026-10-15",
+      "src": "CGTN·Culture",
+      "title": "Grassroots Consultation: Beijing salon brings dialogue on governance",
+      "link": "https://news.cgtn.com/news/2026-10-15/Grassroots-Consultation-Beijing-salon-brings-dialogue-on-governance-1RfS0IIgmK4/p.html"
     },
     {
       "id": "n14",
-      "date": "2026-10-09",
+      "date": "2026-10-14",
       "src": "CGTN·Travel",
-      "title": "Macao draws record National Day crowds",
-      "link": "https://news.cgtn.com/news/2026-10-09/Macao-draws-record-National-Day-crowds-1R6lurnnz0s/p.html"
+      "title": "Beijing through their eyes: A Spanish tourist sketches the Bell Tower",
+      "link": "https://news.cgtn.com/news/2026-10-14/Beijing-through-their-eyes-A-Spanish-tourist-sketches-the-Bell-Tower-1ReDDpwCTlu/p.html"
     },
     {
       "id": "n15",
-      "date": "2026-09-27",
+      "date": "2026-09-23",
       "src": "CGTN·Sports",
-      "title": "Exclusive: Mutaz Essa Barshim eyes his fifth Asian Games and beyond",
-      "link": "https://news.cgtn.com/news/2026-09-27/Exclusive-Mutaz-Essa-Barshim-eyes-his-fifth-Asian-Games-and-beyond-1QM7HWZgw4U/p.html"
+      "title": "Swimming roundup: China collects four more titles at Asian Games",
+      "link": "https://news.cgtn.com/news/2026-09-23/Swimming-roundup-China-collects-four-more-titles-at-Asian-Games-1QFrx6DxeHS/p.html"
     }
   ],
   "readings": [
