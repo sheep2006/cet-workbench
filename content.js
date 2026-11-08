@@ -5,52 +5,52 @@ window.CET_CONTENT = {
 "news": [
     {
       "id": "n01",
-      "date": "2026-11-06",
-      "src": "CGTN·Business",
-      "title": "Bvlgari CEO: Creating immersive experiences for Chinese consumers",
-      "link": "https://news.cgtn.com/news/2026-11-06/-Bvlgari-CEO-Creating-immersive-experiences-for-Chinese-consumers-1RQHZiwMIU0/p.html"
+      "date": "2026-11-07",
+      "src": "CGTN·China",
+      "title": "Experts: Why CPC's self-reform matters for China's governance",
+      "link": "https://news.cgtn.com/news/2026-11-07/Experts-Why-CPC-s-self-reform-matters-for-China-s-governance-1RRUotgdh3a/p.html"
     },
     {
       "id": "n02",
       "date": "2026-11-06",
-      "src": "CGTN·Business",
-      "title": "BizTalk | CIIE special: China's evolving role in the global market",
-      "link": "https://news.cgtn.com/news/2026-11-06/BizTalk-CIIE-special-China-s-evolving-role-in-the-global-market-1RQHp4dgU3m/p.html"
+      "src": "CGTN·China",
+      "title": "Atlanta is ready for pandas",
+      "link": "https://newsus.cgtn.com/news/2026-11-06/Atlanta-is-ready-for-pandas-1RQ6U6psLaE/p.html"
     },
     {
       "id": "n03",
       "date": "2026-11-06",
       "src": "CGTN·China",
-      "title": "American Food &amp; Agriculture Pavilion launches at 9th CIIE",
-      "link": "https://news.cgtn.com/news/2026-11-06/American-Food-Agriculture-Pavilion-launches-at-9th-CIIE-1RR7ACGuMNO/p.html"
+      "title": "One Blue World | Xiapu: Life Among the Seaweed Farms",
+      "link": "https://news.cgtn.com/news/2026-11-06/One-Blue-World-Xiapu-Life-Among-the-Seaweed-Farms-1RPf28w3CqQ/p.html"
     },
     {
       "id": "n04",
-      "date": "2026-11-06",
-      "src": "CGTN·China",
-      "title": "Dunhuang: Balancing heritage protection and tourism boom",
-      "link": "https://news.cgtn.com/news/2026-11-06/Dunhuang-Balancing-heritage-protection-and-tourism-boom-1RQH5m5Tzxu/p.html"
-    },
-    {
-      "id": "n05",
-      "date": "2026-11-06",
-      "src": "CGTN·China",
-      "title": "Report highlights China's growing role as global import market",
-      "link": "https://news.cgtn.com/news/2026-11-06/Report-highlights-China-s-growing-role-as-global-import-market-1RQpSVXAA8g/p.html"
-    },
-    {
-      "id": "n06",
       "date": "2026-11-05",
       "src": "CGTN·Culture",
       "title": "Immersive hubs revitalize Dunhuang's ancient legacy",
       "link": "https://news.cgtn.com/news/2026-11-05/Immersive-hubs-revitalize-Dunhuang-s-ancient-legacy-1RNMMWib11S/p.html"
     },
     {
-      "id": "n07",
+      "id": "n05",
+      "date": "2026-11-05",
+      "src": "CGTN·Business",
+      "title": "China's opening up: A world of opportunities",
+      "link": "https://news.cgtn.com/news/2026-11-05/China-s-opening-up-A-world-of-opportunities-1RPnxywULAc/p.html"
+    },
+    {
+      "id": "n06",
       "date": "2026-11-04",
       "src": "CGTN·Travel",
       "title": "Would you spend a day by the sea?",
       "link": "https://news.cgtn.com/news/2026-11-04/Would-you-spend-a-day-by-the-sea--1RNuUQavN4s/p.html"
+    },
+    {
+      "id": "n07",
+      "date": "2026-11-01",
+      "src": "CGTN·Business",
+      "title": "US firms lead business sign-ups for APEC CEO Summit in Shenzhen",
+      "link": "https://news.cgtn.com/news/2026-11-01/US-firms-lead-business-sign-ups-for-APEC-CEO-Summit-in-Shenzhen-1RIu9vQVGPC/p.html"
     },
     {
       "id": "n08",
@@ -61,10 +61,10 @@ window.CET_CONTENT = {
     },
     {
       "id": "n09",
-      "date": "2026-10-27",
+      "date": "2026-10-28",
       "src": "CGTN·Business",
-      "title": "China's industrial profits up 15.5% in first nine months of 2026",
-      "link": "https://news.cgtn.com/news/2026-10-27/China-s-industrial-profits-up-15-5-in-first-nine-months-of-2026-1RzS2nBETHa/p.html"
+      "title": "BizDataDive: 76 years of China-Finland diplomatic ties",
+      "link": "https://news.cgtn.com/news/2026-10-28/BizDataDive-76-years-of-China-Finland-diplomatic-ties-1RBTKEVKXOo/p.html"
     },
     {
       "id": "n10",
