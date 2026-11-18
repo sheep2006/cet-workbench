@@ -1,7 +1,7 @@
 // 四六级备考工作台 · 每日内容包
 // news 由每日自动化真实抓取 CGTN RSS（多个频道，链接已逐条验证 200）；readings/listenings/dialogues 为 AI 原创改写（四六级难度）
 window.CET_CONTENT = {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
 "news": [
     {
       "id": "n01",
@@ -33,55 +33,76 @@ window.CET_CONTENT = {
     },
     {
       "id": "n05",
+      "date": "2026-11-15",
+      "src": "CGTN·Culture",
+      "title": "Goryeo Buddhist paintings reflect China-Korea artistic ties",
+      "link": "https://news.cgtn.com/news/2026-11-15/Goryeo-Buddhist-paintings-reflect-China-Korea-artistic-ties-1S5O0NH9F5u/p.html"
+    },
+    {
+      "id": "n06",
+      "date": "2026-11-15",
+      "src": "CGTN·Culture",
+      "title": "Inside Suzhou: Where history meets modern charm",
+      "link": "https://news.cgtn.com/news/2026-11-15/Inside-Suzhou-Where-history-meets-modern-charm-1S5O7vPnWQE/p.html"
+    },
+    {
+      "id": "n07",
       "date": "2026-11-13",
       "src": "CGTN·Business",
       "title": "China looks to APEC leaders' declaration at Shenzhen meeting",
       "link": "https://news.cgtn.com/news/2026-11-13/China-looks-to-APEC-leaders-declaration-at-Shenzhen-meeting-1S2u2xsPhSw/p.html"
     },
     {
-      "id": "n06",
+      "id": "n08",
       "date": "2026-11-12",
       "src": "CGTN·Travel",
       "title": "This bus has no driver. We got on anyway.",
       "link": "https://news.cgtn.com/news/2026-11-12/This-bus-has-no-driver-We-got-on-anyway--1RVxKVFOs80/p.html"
     },
     {
-      "id": "n07",
+      "id": "n09",
       "date": "2026-11-11",
       "src": "CGTN·Travel",
       "title": "Hongcun: A village designed around water",
       "link": "https://news.cgtn.com/news/2026-11-11/Hongcun-A-village-designed-around-water-1RW06ab9ntS/p.html"
     },
     {
-      "id": "n08",
+      "id": "n10",
       "date": "2026-11-09",
       "src": "CGTN·Business",
       "title": "Global firms leverage China as bridge to connect other markets",
       "link": "https://news.cgtn.com/news/2026-11-09/Global-firms-leverage-China-as-bridge-to-connect-other-markets--1RVrsy5LpmM/p.html"
     },
     {
-      "id": "n09",
+      "id": "n11",
       "date": "2026-11-08",
       "src": "CGTN·Sports",
       "title": "China retains women's trampoline team world title in Nanjing",
       "link": "https://news.cgtn.com/news/2026-11-08/China-retains-women-s-trampoline-team-world-title-in-Nanjing-1RTHJuAjm48/p.html"
     },
     {
-      "id": "n10",
+      "id": "n12",
       "date": "2026-11-08",
       "src": "CGTN·Sports",
       "title": "China's Liao sweeps women's 86kg gold medals, breaks two world records",
       "link": "https://news.cgtn.com/news/2026-11-08/China-s-Liao-sweeps-women-s-86kg-gold-medals-breaks-two-world-records-1RTGV4B2DTi/p.html"
     },
     {
-      "id": "n11",
+      "id": "n13",
+      "date": "2026-11-06",
+      "src": "CGTN·Culture",
+      "title": "Zenless Zone Zero's global playbook: Game, art, offline",
+      "link": "https://news.cgtn.com/news/2026-11-06/Zenless-Zone-Zero-s-global-playbook-Game-art-offline-1RQKA1Fz0I0/p.html"
+    },
+    {
+      "id": "n14",
       "date": "2026-10-28",
       "src": "CGTN·Travel",
       "title": "the timeless wontons of Ningguo",
       "link": "https://news.cgtn.com/news/2026-10-28/The-Timeless-Wontons-of-Ningguo-1RyshzzbMIw/p.html"
     },
     {
-      "id": "n12",
+      "id": "n15",
       "date": "2026-10-03",
       "src": "CGTN·Sports",
       "title": "Africa Watch: WAC will be held in Nairobi - Why it matters for Kenya?",
