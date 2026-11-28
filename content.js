@@ -6,30 +6,30 @@ window.CET_CONTENT = {
     {
       "id": "n01",
       "date": "2026-11-27",
-      "src": "CGTN·Culture",
-      "title": "Buddha Jumps Over the Wall the crown jewel of Fujian cuisine",
-      "link": "https://news.cgtn.com/news/2026-11-27/Buddha-Jumps-Over-the-Wall-the-crown-jewel-of-Fujian-cuisine-1SpAMq8LnJS/p.html"
-    },
-    {
-      "id": "n02",
-      "date": "2026-11-27",
       "src": "CGTN·China",
       "title": "Bangkok hosts seminar on Xi's book on protecting human rights",
       "link": "https://news.cgtn.com/news/2026-11-27/Bangkok-hosts-seminar-on-Xi-s-book-on-protecting-human-rights-1SpY0m6Brl6/p.html"
     },
     {
-      "id": "n03",
+      "id": "n02",
       "date": "2026-11-27",
       "src": "CGTN·China",
       "title": "Netherlands vows to counter US chip bill targeting ASML China sales",
       "link": "https://news.cgtn.com/news/2026-11-27/Netherlands-vows-to-counter-US-chip-bill-targeting-ASML-China-sales-1SpiBiktaPC/p.html"
     },
     {
-      "id": "n04",
+      "id": "n03",
       "date": "2026-11-26",
       "src": "CGTN·China",
       "title": "China urges Japan to destroy abandoned chemical weapons",
       "link": "https://news.cgtn.com/news/2026-11-26/China-urges-Japan-to-destroy-abandoned-chemical-weapons-1SnqFQ4FRmw/p.html"
+    },
+    {
+      "id": "n04",
+      "date": "2026-11-25",
+      "src": "CGTN·Culture",
+      "title": "Lhasa's Old Streets and New Vibes, a Mix of Colors",
+      "link": "https://news.cgtn.com/news/2026-11-25/Lhasa-s-Old-Streets-and-New-Vibes-a-Mix-of-Colors--1SkJef0xJuM/p.html"
     },
     {
       "id": "n05",
@@ -56,36 +56,36 @@ window.CET_CONTENT = {
       "id": "n08",
       "date": "2026-11-20",
       "src": "CGTN·Culture",
-      "title": "APEC leaders' spouses visit cultural exhibition in Shenzhen",
-      "link": "https://news.cgtn.com/news/2026-11-20/APEC-leaders-spouses-visit-cultural-exhibition-in-Shenzhen-1SeaH01tZcY/p.html"
+      "title": "New documentary explores Suzhou's Pingjiang Road",
+      "link": "https://news.cgtn.com/news/2026-11-20/New-documentary-explores-Suzhou-s-Pingjiang-Road-1SdUcoH6vCg/p.html"
     },
     {
       "id": "n09",
+      "date": "2026-11-18",
+      "src": "CGTN·Sports",
+      "title": "Beyond Sight: Motivational speaker Nyima Wangdu's mountain journey",
+      "link": "https://news.cgtn.com/news/2026-11-18/Beyond-Sight-Motivational-speaker-Nyima-Wangdu-s-mountain-journey-1SafXBs7f2w/p.html"
+    },
+    {
+      "id": "n10",
       "date": "2026-11-15",
       "src": "CGTN·Business",
       "title": "AmCham China president: Why stability matters for US-China business",
       "link": "https://news.cgtn.com/news/2026-11-15/AmCham-China-president-Why-stability-matters-for-US-China-business-1S5axIt6vyE/p.html"
     },
     {
-      "id": "n10",
-      "date": "2026-11-12",
+      "id": "n11",
+      "date": "2026-11-13",
       "src": "CGTN·Culture",
-      "title": "China Film Showcase brings Chinese cinema to Dublin",
-      "link": "https://news.cgtn.com/news/2026-11-12/China-Film-Showcase-brings-Chinese-cinema-to-Dublin-1S0myvcz5Zu/p.html"
+      "title": "From the wild to the human heart: Films for this winter",
+      "link": "https://news.cgtn.com/news/2026-11-13/From-the-wild-to-the-human-heart-Films-for-this-winter-1S2qiIAvfjy/p.html"
     },
     {
-      "id": "n11",
+      "id": "n12",
       "date": "2026-11-12",
       "src": "CGTN·Travel",
       "title": "He Brought Mexican Flavors to China",
       "link": "https://news.cgtn.com/news/2026-11-12/He-Brought-Mexican-Flavors-to-China-1S0w5WL8lB6/p.html"
-    },
-    {
-      "id": "n12",
-      "date": "2026-11-05",
-      "src": "CGTN·Sports",
-      "title": "Sheng Lihao, Wang Zifei retain title at ISSF World Championships",
-      "link": "https://news.cgtn.com/news/2026-11-05/Sheng-Lihao-Wang-Zifei-retain-title-at-ISSF-World-Championships-1ROJnZ73KlW/p.html"
     },
     {
       "id": "n13",
@@ -96,17 +96,17 @@ window.CET_CONTENT = {
     },
     {
       "id": "n14",
-      "date": "2026-10-15",
+      "date": "2026-10-29",
       "src": "CGTN·Sports",
-      "title": "Changchun welcomes flame as 2027 Winter Universiade countdown begins",
-      "link": "https://news.cgtn.com/news/2026-10-15/Changchun-welcomes-flame-as-2027-Winter-Universiade-countdown-begins-1RfXQt5x8kw/p.html"
+      "title": "Hong Kexin claims gold for China at World Wrestling Championships",
+      "link": "https://news.cgtn.com/news/2026-10-29/Hong-Kexin-claims-gold-for-China-at-World-Wrestling-Championships-1RDbGrrMclG/p.html"
     },
     {
       "id": "n15",
-      "date": "2026-10-10",
+      "date": "2026-10-08",
       "src": "CGTN·Sports",
-      "title": "Zheng Qinwen reaches China Open semifinals with straight-set win",
-      "link": "https://news.cgtn.com/news/2026-10-10/Zheng-Qinwen-reaches-China-Open-semifinals-with-straight-set-win-1R7KP2weY8g/p.html"
+      "title": "Zheng Qinwen reaches China Open quarterfinals after three-set thriller",
+      "link": "https://news.cgtn.com/news/2026-10-08/Zheng-Qinwen-reaches-China-Open-quarterfinals-after-three-set-thriller-1R4jk9AsSic/p.html"
     }
   ],
   "readings": [
